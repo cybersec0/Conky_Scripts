@@ -1,0 +1,114 @@
+
+background yes
+font Ubuntu:size=8:bold
+xftfont Ubuntu:size=8:bold
+use_xft yes
+xftalpha 0.5
+update_interval 1.0
+total_run_times 0
+
+# for gnome 2.x user uncomment the following line
+#own_window yes
+#own_window_type override
+#own_window_transparent yes
+#own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# for gnome 3.x user uncomment the following line
+own_window_class Conky
+own_window yes
+own_window_type conky
+own_window_transparent no
+own_window_argb_visual yes
+own_window_argb_value 110
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# for kde user
+#own_window yes
+#own_window_transparent yes
+##own_window_argb_visual yes
+#own_window_type normal
+#own_window_class conky-semi
+#own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+double_buffer yes
+draw_shades yes
+draw_outline yes
+draw_borders no
+draw_graph_borders no
+minimum_size 250
+maximum_width 1000
+default_color ccffff
+default_shade_color 000000
+color0 ffcc33
+color1 99ffcc
+color2 CCFF00
+color3 00ffff
+draw_outline no
+alignment top_right
+gap_x 250
+gap_y 60
+no_buffers yes
+cpu_avg_samples 2
+override_utf8_locale yes
+uppercase no
+use_spacer none
+
+TEXT
+${alignc}${font Aquire:size=16:bold}${color3}NETWORK TRAFFIC${font}${color}
+
+
+${font Fontawesome:size=10}$font INBOUND(1-32767):${goto 180}${tcp_portmon 1 32767 count}
+${goto 20}${offset 0}SOURCE${goto 140}DESTINATION${goto 270}PROTOCOL${goto 370}HOST/DOMAIN
+${goto 5}${tcp_portmon 1 32767 lip  0}: ${tcp_portmon 1 32767 lport  0}${goto 140}${tcp_portmon 1 32767 rip  0}: ${tcp_portmon 1 32767 rport  0}${goto 270}${tcp_portmon 1 32767 lservice  0}=>${tcp_portmon 1 32767 rservice  0}${goto 370}${tcp_portmon 1 32767 lhost  0}=>${tcp_portmon 1 32767 rhost  0}
+${goto 5}${tcp_portmon 1 32767 lip  1}: ${tcp_portmon 1 32767 lport  1}${goto 140}${tcp_portmon 1 32767 rip  1}: ${tcp_portmon 1 32767 rport  1}${goto 270}${tcp_portmon 1 32767 lservice  1}=>${tcp_portmon 1 32767 rservice  1}${goto 370}${tcp_portmon 1 32767 lhost  1}=>${tcp_portmon 1 32767 rhost  1}
+${goto 5}${tcp_portmon 1 32767 lip  2}: ${tcp_portmon 1 32767 lport  2}${goto 140}${tcp_portmon 1 32767 rip  2}: ${tcp_portmon 1 32767 rport  2}${goto 270}${tcp_portmon 1 32767 lservice  2}=>${tcp_portmon 1 32767 rservice  2}${goto 370}${tcp_portmon 1 32767 lhost  2}=>${tcp_portmon 1 32767 rhost  2}
+${goto 5}${tcp_portmon 1 32767 lip  3}: ${tcp_portmon 1 32767 lport  3}${goto 140}${tcp_portmon 1 32767 rip  3}: ${tcp_portmon 1 32767 rport  3}${goto 270}${tcp_portmon 1 32767 lservice  3}=>${tcp_portmon 1 32767 rservice  3}${goto 370}${tcp_portmon 1 32767 lhost  3}=>${tcp_portmon 1 32767 rhost  3}
+${goto 5}${tcp_portmon 1 32767 lip  4}: ${tcp_portmon 1 32767 lport  4}${goto 140}${tcp_portmon 1 32767 rip  4}: ${tcp_portmon 1 32767 rport  4}${goto 270}${tcp_portmon 1 32767 lservice  4}=>${tcp_portmon 1 32767 rservice  4}${goto 370}${tcp_portmon 1 32767 lhost  4}=>${tcp_portmon 1 32767 rhost  4}
+${goto 5}${tcp_portmon 1 32767 lip  5}: ${tcp_portmon 1 32767 lport  5}${goto 140}${tcp_portmon 1 32767 rip  5}: ${tcp_portmon 1 32767 rport  5}${goto 270}${tcp_portmon 1 32767 lservice  5}=>${tcp_portmon 1 32767 rservice  5}${goto 370}${tcp_portmon 1 32767 lhost  5}=>${tcp_portmon 1 32767 rhost  5}
+${goto 5}${tcp_portmon 1 32767 lip  6}: ${tcp_portmon 1 32767 lport  6}${goto 140}${tcp_portmon 1 32767 rip  6}: ${tcp_portmon 1 32767 rport  6}${goto 270}${tcp_portmon 1 32767 lservice  6}=>${tcp_portmon 1 32767 rservice  6}${goto 370}${tcp_portmon 1 32767 lhost  6}=>${tcp_portmon 1 32767 rhost  6}
+${goto 5}${tcp_portmon 1 32767 lip  7}: ${tcp_portmon 1 32767 lport  7}${goto 140}${tcp_portmon 1 32767 rip  7}: ${tcp_portmon 1 32767 rport  7}${goto 270}${tcp_portmon 1 32767 lservice  7}=>${tcp_portmon 1 32767 rservice  7}${goto 370}${tcp_portmon 1 32767 lhost  7}=>${tcp_portmon 1 32767 rhost  7}
+${goto 5}${tcp_portmon 1 32767 lip  8}: ${tcp_portmon 1 32767 lport  8}${goto 140}${tcp_portmon 1 32767 rip  8}: ${tcp_portmon 1 32767 rport  8}${goto 270}${tcp_portmon 1 32767 lservice  8}=>${tcp_portmon 1 32767 rservice  8}${goto 370}${tcp_portmon 1 32767 lhost  8}=>${tcp_portmon 1 32767 rhost  8}
+${goto 5}${tcp_portmon 1 32767 lip  9}: ${tcp_portmon 1 32767 lport  9}${goto 140}${tcp_portmon 1 32767 rip  9}: ${tcp_portmon 1 32767 rport  9}${goto 270}${tcp_portmon 1 32767 lservice  9}=>${tcp_portmon 1 32767 rservice  9}${goto 370}${tcp_portmon 1 32767 lhost  9}=>${tcp_portmon 1 32767 rhost  9}
+${goto 5}${tcp_portmon 1 32767 lip  10}: ${tcp_portmon 1 32767 lport  10}${goto 140}${tcp_portmon 1 32767 rip  10}: ${tcp_portmon 1 32767 rport  10}${goto 270}${tcp_portmon 1 32767 lservice  10}=>${tcp_portmon 1 32767 rservice  10}${goto 370}${tcp_portmon 1 32767 lhost  10}=>${tcp_portmon 1 32767 rhost  10}
+${goto 5}${tcp_portmon 1 32767 lip  11}: ${tcp_portmon 1 32767 lport  11}${goto 140}${tcp_portmon 1 32767 rip  11}: ${tcp_portmon 1 32767 rport  11}${goto 270}${tcp_portmon 1 32767 lservice  11}=>${tcp_portmon 1 32767 rservice  11}${goto 370}${tcp_portmon 1 32767 lhost  11}=>${tcp_portmon 1 32767 rhost  11}
+${goto 5}${tcp_portmon 1 32767 lip  12}: ${tcp_portmon 1 32767 lport  12}${goto 140}${tcp_portmon 1 32767 rip  12}: ${tcp_portmon 1 32767 rport  12}${goto 270}${tcp_portmon 1 32767 lservice  12}=>${tcp_portmon 1 32767 rservice  12}${goto 370}${tcp_portmon 1 32767 lhost  12}=>${tcp_portmon 1 32767 rhost  12}
+${goto 5}${tcp_portmon 1 32767 lip  13}: ${tcp_portmon 1 32767 lport  13}${goto 140}${tcp_portmon 1 32767 rip  13}: ${tcp_portmon 1 32767 rport  13}${goto 270}${tcp_portmon 1 32767 lservice  13}=>${tcp_portmon 1 32767 rservice  13}${goto 370}${tcp_portmon 1 32767 lhost  13}=>${tcp_portmon 1 32767 rhost  13}
+${goto 5}${tcp_portmon 1 32767 lip  14}: ${tcp_portmon 1 32767 lport  14}${goto 140}${tcp_portmon 1 32767 rip  14}: ${tcp_portmon 1 32767 rport  14}${goto 270}${tcp_portmon 1 32767 lservice  14}=>${tcp_portmon 1 32767 rservice  14}${goto 370}${tcp_portmon 1 32767 lhost  14}=>${tcp_portmon 1 32767 rhost  14}
+${goto 5}${tcp_portmon 1 32767 lip  15}: ${tcp_portmon 1 32767 lport  15}${goto 140}${tcp_portmon 1 32767 rip  15}: ${tcp_portmon 1 32767 rport  15}${goto 270}${tcp_portmon 1 32767 lservice  15}=>${tcp_portmon 1 32767 rservice  15}${goto 370}${tcp_portmon 1 32767 lhost  15}=>${tcp_portmon 1 32767 rhost  15}
+${goto 5}${tcp_portmon 1 32767 lip  16}: ${tcp_portmon 1 32767 lport  16}${goto 140}${tcp_portmon 1 32767 rip  16}: ${tcp_portmon 1 32767 rport  16}${goto 270}${tcp_portmon 1 32767 lservice  16}=>${tcp_portmon 1 32767 rservice  16}${goto 370}${tcp_portmon 1 32767 lhost  16}=>${tcp_portmon 1 32767 rhost  16}
+${goto 5}${tcp_portmon 1 32767 lip  17}: ${tcp_portmon 1 32767 lport  17}${goto 140}${tcp_portmon 1 32767 rip  17}: ${tcp_portmon 1 32767 rport  17}${goto 270}${tcp_portmon 1 32767 lservice  17}=>${tcp_portmon 1 32767 rservice  17}${goto 370}${tcp_portmon 1 32767 lhost  17}=>${tcp_portmon 1 32767 rhost  17}
+${goto 5}${tcp_portmon 1 32767 lip  18}: ${tcp_portmon 1 32767 lport  18}${goto 140}${tcp_portmon 1 32767 rip  18}: ${tcp_portmon 1 32767 rport  18}${goto 270}${tcp_portmon 1 32767 lservice  18}=>${tcp_portmon 1 32767 rservice  18}${goto 370}${tcp_portmon 1 32767 lhost  18}=>${tcp_portmon 1 32767 rhost  18}
+${goto 5}${tcp_portmon 1 32767 lip  19}: ${tcp_portmon 1 32767 lport  19}${goto 140}${tcp_portmon 1 32767 rip  19}: ${tcp_portmon 1 32767 rport  19}${goto 270}${tcp_portmon 1 32767 lservice  19}=>${tcp_portmon 1 32767 rservice  19}${goto 370}${tcp_portmon 1 32767 lhost  19}=>${tcp_portmon 1 32767 rhost  19}
+${goto 5}${tcp_portmon 1 32767 lip  20}: ${tcp_portmon 1 32767 lport  20}${goto 140}${tcp_portmon 1 32767 rip  20}: ${tcp_portmon 1 32767 rport  20}${goto 270}${tcp_portmon 1 32767 lservice  20}=>${tcp_portmon 1 32767 rservice  20}${goto 370}${tcp_portmon 1 32767 lhost  20}=>${tcp_portmon 1 32767 rhost  20}
+${goto 5}${tcp_portmon 1 32767 lip  21}: ${tcp_portmon 1 32767 lport  21}${goto 140}${tcp_portmon 1 32767 rip  21}: ${tcp_portmon 1 32767 rport  21}${goto 270}${tcp_portmon 1 32767 lservice  21}=>${tcp_portmon 1 32767 rservice  21}${goto 370}${tcp_portmon 1 32767 lhost  21}=>${tcp_portmon 1 32767 rhost  21}
+${goto 5}${tcp_portmon 1 32767 lip  22}: ${tcp_portmon 1 32767 lport  22}${goto 140}${tcp_portmon 1 32767 rip  22}: ${tcp_portmon 1 32767 rport  22}${goto 270}${tcp_portmon 1 32767 lservice  22}=>${tcp_portmon 1 32767 rservice  22}${goto 370}${tcp_portmon 1 32767 lhost  22}=>${tcp_portmon 1 32767 rhost  22}
+
+
+${font Fontawesome:size=10} $font OUTBOUND(32768-65535):${goto 180}${tcp_portmon 32768 65535 count}
+${goto 20}${offset 0}SOURCE${goto 140}DESTINATION${goto 270}PROTOCOL${goto 370}HOST/DOMAIN              
+${goto 5}${tcp_portmon 32768 65535 lip  0}: ${tcp_portmon 32768 65535 lport  0}${goto 140}${tcp_portmon 32768 65535 rip  0}: ${tcp_portmon 32768 65535 rport  0}${goto 270}${tcp_portmon 32768 65535 lservice  0}=>${tcp_portmon 32768 65535 rservice  0}${goto 370}${tcp_portmon 32768 65535 lhost  0}=>${tcp_portmon 32768 65535 rhost  0}
+${goto 5}${tcp_portmon 32768 65535 lip  1}: ${tcp_portmon 32768 65535 lport  1}${goto 140}${tcp_portmon 32768 65535 rip  1}: ${tcp_portmon 32768 65535 rport  1}${goto 270}${tcp_portmon 32768 65535 lservice  1}=>${tcp_portmon 32768 65535 rservice  1}${goto 370}${tcp_portmon 32768 65535 lhost  1}=>${tcp_portmon 32768 65535 rhost  1}
+${goto 5}${tcp_portmon 32768 65535 lip  2}: ${tcp_portmon 32768 65535 lport  2}${goto 140}${tcp_portmon 32768 65535 rip  2}: ${tcp_portmon 32768 65535 rport  2}${goto 270}${tcp_portmon 32768 65535 lservice  2}=>${tcp_portmon 32768 65535 rservice  2}${goto 370}${tcp_portmon 32768 65535 lhost  2}=>${tcp_portmon 32768 65535 rhost  2}
+${goto 5}${tcp_portmon 32768 65535 lip  3}: ${tcp_portmon 32768 65535 lport  3}${goto 140}${tcp_portmon 32768 65535 rip  3}: ${tcp_portmon 32768 65535 rport  3}${goto 270}${tcp_portmon 32768 65535 lservice  3}=>${tcp_portmon 32768 65535 rservice  3}${goto 370}${tcp_portmon 32768 65535 lhost  3}=>${tcp_portmon 32768 65535 rhost  3}
+${goto 5}${tcp_portmon 32768 65535 lip  4}: ${tcp_portmon 32768 65535 lport  4}${goto 140}${tcp_portmon 32768 65535 rip  4}: ${tcp_portmon 32768 65535 rport  4}${goto 270}${tcp_portmon 32768 65535 lservice  4}=>${tcp_portmon 32768 65535 rservice  4}${goto 370}${tcp_portmon 32768 65535 lhost  4}=>${tcp_portmon 32768 65535 rhost  4}
+${goto 5}${tcp_portmon 32768 65535 lip  5}: ${tcp_portmon 32768 65535 lport  5}${goto 140}${tcp_portmon 32768 65535 rip  5}: ${tcp_portmon 32768 65535 rport  5}${goto 270}${tcp_portmon 32768 65535 lservice  5}=>${tcp_portmon 32768 65535 rservice  5}${goto 370}${tcp_portmon 32768 65535 lhost  5}=>${tcp_portmon 32768 65535 rhost  5}
+${goto 5}${tcp_portmon 32768 65535 lip  6}: ${tcp_portmon 32768 65535 lport  6}${goto 140}${tcp_portmon 32768 65535 rip  6}: ${tcp_portmon 32768 65535 rport  6}${goto 270}${tcp_portmon 32768 65535 lservice  6}=>${tcp_portmon 32768 65535 rservice  6}${goto 370}${tcp_portmon 32768 65535 lhost  6}=>${tcp_portmon 32768 65535 rhost  6}
+${goto 5}${tcp_portmon 32768 65535 lip  7}: ${tcp_portmon 32768 65535 lport  7}${goto 140}${tcp_portmon 32768 65535 rip  7}: ${tcp_portmon 32768 65535 rport  7}${goto 270}${tcp_portmon 32768 65535 lservice  7}=>${tcp_portmon 32768 65535 rservice  7}${goto 370}${tcp_portmon 32768 65535 lhost  7}=>${tcp_portmon 32768 65535 rhost  7}
+${goto 5}${tcp_portmon 32768 65535 lip  8}: ${tcp_portmon 32768 65535 lport  8}${goto 140}${tcp_portmon 32768 65535 rip  8}: ${tcp_portmon 32768 65535 rport  8}${goto 270}${tcp_portmon 32768 65535 lservice  8}=>${tcp_portmon 32768 65535 rservice  8}${goto 370}${tcp_portmon 32768 65535 lhost  8}=>${tcp_portmon 32768 65535 rhost  8}
+${goto 5}${tcp_portmon 32768 65535 lip  9}: ${tcp_portmon 32768 65535 lport  9}${goto 140}${tcp_portmon 32768 65535 rip  9}: ${tcp_portmon 32768 65535 rport  9}${goto 270}${tcp_portmon 32768 65535 lservice  9}=>${tcp_portmon 32768 65535 rservice  9}${goto 370}${tcp_portmon 32768 65535 lhost  9}=>${tcp_portmon 32768 65535 rhost  9}
+${goto 5}${tcp_portmon 32768 65535 lip  10}: ${tcp_portmon 32768 65535 lport  10}${goto 140}${tcp_portmon 32768 65535 rip  10}: ${tcp_portmon 32768 65535 rport  10}${goto 270}${tcp_portmon 32768 65535 lservice  10}=>${tcp_portmon 32768 65535 rservice  10}${goto 370}${tcp_portmon 32768 65535 lhost  10}=>${tcp_portmon 32768 65535 rhost  10}
+${goto 5}${tcp_portmon 32768 65535 lip  11}: ${tcp_portmon 32768 65535 lport  11}${goto 140}${tcp_portmon 32768 65535 rip  11}: ${tcp_portmon 32768 65535 rport  11}${goto 270}${tcp_portmon 32768 65535 lservice  11}=>${tcp_portmon 32768 65535 rservice  11}${goto 370}${tcp_portmon 32768 65535 lhost  11}=>${tcp_portmon 32768 65535 rhost  11}
+${goto 5}${tcp_portmon 32768 65535 lip  12}: ${tcp_portmon 32768 65535 lport  12}${goto 140}${tcp_portmon 32768 65535 rip  12}: ${tcp_portmon 32768 65535 rport  12}${goto 270}${tcp_portmon 32768 65535 lservice  12}=>${tcp_portmon 32768 65535 rservice  12}${goto 370}${tcp_portmon 32768 65535 lhost  12}=>${tcp_portmon 32768 65535 rhost  12}
+${goto 5}${tcp_portmon 32768 65535 lip  13}: ${tcp_portmon 32768 65535 lport  13}${goto 140}${tcp_portmon 32768 65535 rip  13}: ${tcp_portmon 32768 65535 rport  13}${goto 270}${tcp_portmon 32768 65535 lservice  13}=>${tcp_portmon 32768 65535 rservice  13}${goto 370}${tcp_portmon 32768 65535 lhost  13}=>${tcp_portmon 32768 65535 rhost  13}
+${goto 5}${tcp_portmon 32768 65535 lip  14}: ${tcp_portmon 32768 65535 lport  14}${goto 140}${tcp_portmon 32768 65535 rip  14}: ${tcp_portmon 32768 65535 rport  14}${goto 270}${tcp_portmon 32768 65535 lservice  14}=>${tcp_portmon 32768 65535 rservice  14}${goto 370}${tcp_portmon 32768 65535 lhost  14}=>${tcp_portmon 32768 65535 rhost  14}
+${goto 5}${tcp_portmon 32768 65535 lip  15}: ${tcp_portmon 32768 65535 lport  15}${goto 140}${tcp_portmon 32768 65535 rip  15}: ${tcp_portmon 32768 65535 rport  15}${goto 270}${tcp_portmon 32768 65535 lservice  15}=>${tcp_portmon 32768 65535 rservice  15}${goto 370}${tcp_portmon 32768 65535 lhost  15}=>${tcp_portmon 32768 65535 rhost  15}
+${goto 5}${tcp_portmon 32768 65535 lip  16}: ${tcp_portmon 32768 65535 lport  16}${goto 140}${tcp_portmon 32768 65535 rip  16}: ${tcp_portmon 32768 65535 rport  16}${goto 270}${tcp_portmon 32768 65535 lservice  16}=>${tcp_portmon 32768 65535 rservice  16}${goto 370}${tcp_portmon 32768 65535 lhost  16}=>${tcp_portmon 32768 65535 rhost  16}
+${goto 5}${tcp_portmon 32768 65535 lip  17}: ${tcp_portmon 32768 65535 lport  17}${goto 140}${tcp_portmon 32768 65535 rip  17}: ${tcp_portmon 32768 65535 rport  17}${goto 270}${tcp_portmon 32768 65535 lservice  17}=>${tcp_portmon 32768 65535 rservice  17}${goto 370}${tcp_portmon 32768 65535 lhost  17}=>${tcp_portmon 32768 65535 rhost  17}
+${goto 5}${tcp_portmon 32768 65535 lip  18}: ${tcp_portmon 32768 65535 lport  18}${goto 140}${tcp_portmon 32768 65535 rip  18}: ${tcp_portmon 32768 65535 rport  18}${goto 270}${tcp_portmon 32768 65535 lservice  18}=>${tcp_portmon 32768 65535 rservice  18}${goto 370}${tcp_portmon 32768 65535 lhost  18}=>${tcp_portmon 32768 65535 rhost  18}
+${goto 5}${tcp_portmon 32768 65535 lip  19}: ${tcp_portmon 32768 65535 lport  19}${goto 140}${tcp_portmon 32768 65535 rip  19}: ${tcp_portmon 32768 65535 rport  19}${goto 270}${tcp_portmon 32768 65535 lservice  19}=>${tcp_portmon 32768 65535 rservice  19}${goto 370}${tcp_portmon 32768 65535 lhost  19}=>${tcp_portmon 32768 65535 rhost  19}
+${goto 5}${tcp_portmon 32768 65535 lip  20}: ${tcp_portmon 32768 65535 lport  20}${goto 140}${tcp_portmon 32768 65535 rip  20}: ${tcp_portmon 32768 65535 rport  20}${goto 270}${tcp_portmon 32768 65535 lservice  20}=>${tcp_portmon 32768 65535 rservice  20}${goto 370}${tcp_portmon 32768 65535 lhost  20}=>${tcp_portmon 32768 65535 rhost  20}
+${goto 5}${tcp_portmon 32768 65535 lip  21}: ${tcp_portmon 32768 65535 lport  21}${goto 140}${tcp_portmon 32768 65535 rip  21}: ${tcp_portmon 32768 65535 rport  21}${goto 270}${tcp_portmon 32768 65535 lservice  21}=>${tcp_portmon 32768 65535 rservice  21}${goto 370}${tcp_portmon 32768 65535 lhost  21}=>${tcp_portmon 32768 65535 rhost  21}
+${goto 5}${tcp_portmon 32768 65535 lip  22}: ${tcp_portmon 32768 65535 lport  22}${goto 140}${tcp_portmon 32768 65535 rip  22}: ${tcp_portmon 32768 65535 rport  22}${goto 270}${tcp_portmon 32768 65535 lservice  22}=>${tcp_portmon 32768 65535 rservice  22}${goto 370}${tcp_portmon 32768 65535 lhost  22}=>${tcp_portmon 32768 65535 rhost  22}
+# comment this code if you not using kde
+#${texeci 1000 feh --bg-scale ~/.kde4/share/wallpapers/ArchLinux.jpg}
+

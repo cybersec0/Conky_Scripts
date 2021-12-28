@@ -1,0 +1,117 @@
+xinerama_head 0
+background yes
+font Ubuntu:size=8:bold
+xftfont Ubuntu:size=8:bold
+use_xft yes
+xftalpha 0.5
+update_interval 1.0
+total_run_times 0
+
+# for gnome 2.x user uncomment the following line
+#own_window yes
+#own_window_type override
+#own_window_transparent yes
+#own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# for gnome 3.x user uncomment the following line
+own_window_class Conky
+own_window yes
+own_window_type conky
+own_window_transparent no
+own_window_argb_visual yes
+own_window_argb_value 110
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# for kde user
+#own_window yes
+#own_window_transparent yes
+##own_window_argb_visual yes
+#own_window_type normal
+#own_window_class conky-semi
+#own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+double_buffer yes
+draw_shades yes
+draw_outline yes
+draw_borders no
+draw_graph_borders no
+minimum_size 250
+maximum_width 220
+default_color ccffff
+default_shade_color 000000
+color0 ffcc33
+color1 99ffcc
+color2 CCFF00
+color3 4285F4
+color4 ff7200
+color5 ff000d
+draw_outline no
+alignment top_right
+gap_x 10
+gap_y 60
+no_buffers yes
+cpu_avg_samples 2
+override_utf8_locale yes
+uppercase no
+use_spacer none
+
+TEXT
+${goto 50}${font Neoneon:size=16:bold}${color1}${time %r}${font}${color}
+${goto 60}${font Azonix:size=9:bold}${color2}${time %a %d %b}${font}${color}
+${font ConkySymbols:size=16:bold}a${font} ${voffset -10}GNU/Linux»
+${voffset 5}${goto 25}${font ConkySymbols:size=9:bold}r${font} Distro: Fedora 35
+${goto 25}${font Fontawesome:size=10} $font Kernel: $kernel
+${goto 25}${font Fontawesome:size=10} $font Uptime: $uptime_short
+${goto 25}${font Fontawesome:size=10} $font MEMORY:  $mem OF $memmax
+${goto 25}${font Fontawesome:size=10} $font ${voffset -2}CPU TYPE: ${execi 3600 cat /proc/cpuinfo|grep 'model name'|sed -e 's/model name.*: //'| uniq | cut -c 19-40}
+${goto 25}${font ConkySymbols:size=10}l$font  ${voffset -2}CPU FREQUENCY:  ${freq 0} mhz
+${goto 25}${font Fontawesome:size=10} $font CPU USED: ${cpu cpu}%
+${goto 25}${font Fontawesome:size=10} $font THREADS:  $running_threads
+
+${font ConkySymbols:size=16:bold}F${font} ${voffset -10} System»
+
+${goto 10}${font Ubuntu:size=7:bold}CPU Avg: ${goto 90}VCPU1: ${freq_g 1}GHz ${goto 165}VCPU2: ${freq_g 2}GHz ${font}
+${goto 10}${cpubar cpu0 3,40} ${cpu cpu0}%${goto 95}${cpubar cpu1 3,40} ${cpu cpu1}%${goto 165}${cpubar cpu2 3,40} ${cpu cpu2}%
+${goto 10}${font Ubuntu:size=7:bold}VCPU3: ${freq_g 3}GHz ${goto 90}VCPU4: ${freq_g 4}GHz ${goto 165}VCPU5: ${freq_g 5}GHz ${font}
+${goto 10}${cpubar cpu3 3,40} ${cpu cpu3}%${goto 95}${cpubar cpu4 3,40} ${cpu cpu4}%${goto 165}${cpubar cpu5 3,40} ${cpu cpu5}%
+${goto 10}${font Ubuntu:size=7:bold}VCPU6: ${freq_g 6}GHz ${goto 90}VCPU7: ${freq_g 7}GHz ${goto 165}VCPU8: ${freq_g 8}GHz ${font}
+${goto 10}${cpubar cpu6 3,40} ${cpu cpu6}%${goto 95}${cpubar cpu7 3,40} ${cpu cpu7}%${goto 165}${cpubar cpu8 3,40} ${cpu cpu8}%
+${goto 10}${font Ubuntu:size=7:bold}RAM:  ${goto 95}SWAP: ${font}
+${goto 10}${membar 3,40} ${memperc}%${goto 95}${swapbar 3,40} ${swapperc}% 
+
+${voffset 8}${font ConkySymbols:size=14:bold}N${font}  ${voffset -10} Processes» $alignc ${goto 135}${alignr}PID   ${alignr}MEM   ${alignr}CPU
+${goto 35}${top name 1} ${goto 125}$alignr${top pid 1} $alignr${top mem 1} $alignr${top cpu 1}
+${goto 35}${top name 2} ${goto 125}$alignr${top pid 2} $alignr${top mem 2} $alignr${top cpu 2}
+${goto 35}${top name 3} ${goto 125}$alignr${top pid 3} $alignr${top mem 3} $alignr${top cpu 3}
+${goto 35}${top name 4} ${goto 125}$alignr${top pid 4} $alignr${top mem 4} $alignr${top cpu 4}
+${goto 35}${top name 5} ${goto 125}$alignr${top pid 5} $alignr${top mem 5} $alignr${top cpu 5}
+${goto 35}${top name 6} ${goto 125}$alignr${top pid 6} $alignr${top mem 6} $alignr${top cpu 6}
+${goto 35}${top name 7} ${goto 125}$alignr${top pid 7} $alignr${top mem 7} $alignr${top cpu 7}
+${goto 35}${top name 8} ${goto 125}$alignr${top pid 8} $alignr${top mem 8} $alignr${top cpu 8}
+${goto 35}${top name 9} ${goto 125}$alignr${top pid 9} $alignr${top mem 9} $alignr${top cpu 9}
+${goto 35}${top name 10} ${goto 125}$alignr${top pid 10} $alignr${top mem 10} $alignr${top cpu 10}
+${goto 35}$stippled_hr
+${goto 35}Processes: $processes
+${goto 35}Running: $running_processes
+
+${font ConkySymbols:size=16:bold}I${font} ${voffset -10} LAN»
+${goto 35}Download: ${downspeed eno1}
+${goto 35}Upload: ${upspeed eno1}
+${goto 35}Total Download: ${totaldown eno1} 
+${goto 35}Total Upload: ${totalup eno1}
+${font ConkySymbols:size=16:bold}B${font} ${voffset -10} WLAN»
+${goto 35}Signal: ${wireless_link_qual_perc wlo1}
+${goto 35}Download: ${downspeed wlo1}
+${goto 35}Upload: ${upspeed wlo1}
+${goto 35}Total Download: ${totaldown wlo1}
+${goto 35}Total Upload: ${totalup wlo1}
+
+${if_existing /sys/class/power_supply/BAT1}\
+${font FontAwesome:size=16:bold}${font} ${voffset -10} Battery» ${battery BAT1}  ${battery_time BAT1}
+
+${if_match ${battery_percent BAT1} > 20}${color3}${else}${if_match ${battery_percent BAT1} <= 10}${color5}${else}${if_match ${battery_percent BAT1} <= 20}${color4}${endif}${endif}${endif}${endif} \
+${goto 30}${battery_bar 4,150 BAT1}${color}${goto 190}${battery_percent BAT1}%
+
+# comment this code if you not using kde
+#${texeci 1000 feh --bg-scale ~/.kde4/share/wallpapers/ArchLinux.jpg}
+
